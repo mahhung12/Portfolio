@@ -1,0 +1,51 @@
+.banner-container {
+  height: 100vh;
+  background-color: $color_black_v2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .main-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    .avatar {
+      border-radius: 100%;
+
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: $color_tablie;
+    }
+
+    h2 {
+      font-family: "Permanent Marker";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 52px;
+      color: $selective_yellow;
+
+      margin: 0;
+      margin-top: 24px;
+    }
+
+    h3 {
+      font-family: "Permanent Marker";
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: $color_white;
+
+      margin: 0;
+      margin-top: 4px;
+    }
+  }
+}

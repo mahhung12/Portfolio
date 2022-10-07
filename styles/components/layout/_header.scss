@@ -1,0 +1,36 @@
+.header-container {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+
+  position: absolute;
+  z-index: 500;
+  top: 35px;
+  right: 65px;
+
+  .contain {
+    font-family: $blinker;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 24px;
+    /* identical to box height */
+
+    color: $color_white;
+    padding-bottom: 5px;
+
+    @include hoverPointer;
+  }
+
+  .link-active {
+    border-bottom: 3px solid $selective_yellow;
+  }
+
+  .contain ~ .contain {
+    margin-left: 54px;
+  }
+}

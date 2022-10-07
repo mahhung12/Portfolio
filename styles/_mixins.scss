@@ -1,0 +1,35 @@
+@mixin textEllipsis($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+@mixin scrollbars() {
+  &::-webkit-scrollbar {
+    width: 7px;
+    background: $color_khaki;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 14px 14px $color_khaki;
+    border: solid 4px transparent;
+    border-radius: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 14px 14px $color_hokey_pokey;
+    border: solid 1px transparent;
+    border-radius: 14px;
+  }
+}
+
+@mixin hoverPointer() {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+@mixin hoverNfts() {
+  background: $color_nfts_storm_be;
+}

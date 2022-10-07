@@ -1,0 +1,37 @@
+// font
+$blinker: "Blinker";
+$aero: "Aero";
+$helvetica: "Helvetica";
+$bebas_neue: "Bebas Neue";
+$manrope: "Manrope";
+$permanent_marker: "Permanent Marker";
+
+@font-face {
+  font-family: $blinker;
+  src: url("../public/fonts/Blinker-Regular.ttf");
+}
+
+@font-face {
+  font-family: $aero;
+  src: url("../public/fonts/Aero.ttf");
+}
+
+@font-face {
+  font-family: $helvetica;
+  src: url("../public/fonts/Helvetica.ttf");
+}
+
+@font-face {
+  font-family: $bebas_neue;
+  src: url("../public/fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: $manrope;
+  src: url("../public/fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+  font-family: $permanent_marker;
+  src: url("../public/fonts/PermanentMarker-Regular.ttf");
+}
