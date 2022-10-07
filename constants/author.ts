@@ -1,22 +1,28 @@
+import Facebook from "public/svg/FacebookNegative.svg";
+import Github from "public/svg/GithubNegative.svg";
+import Instagram from "public/svg/InstagramNegative.svg";
+import Linkedin from "public/svg/LinkedinNegative.svg";
+import Telegram from "public/svg/TelegramNegative.svg";
+
 export const AUTHOR_SOCIAL_MEDIA = [
   {
-    name: "linkedin",
-    icon: "",
-  },
-  {
     name: "github",
-    icon: "",
+    icon: Github,
   },
   {
-    name: "figma",
-    icon: "",
+    name: "instagram",
+    icon: Instagram,
   },
   {
     name: "facebook",
-    icon: "",
+    icon: Facebook,
   },
   {
     name: "telegram",
-    icon: "",
+    icon: Telegram,
+  },
+  {
+    name: "linkedin",
+    icon: Linkedin,
   },
 ];

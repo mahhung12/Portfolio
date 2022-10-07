@@ -19,8 +19,6 @@ const AppHeader = () => {
           })}
           href={`#${link.direct}`}
         >
-          {console.log("router.asPath", router.asPath)}
-          {console.log("router.pathname", router.pathname)}
           {link.header}
         </AppLink>
       ))}

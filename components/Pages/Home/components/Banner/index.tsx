@@ -1,7 +1,9 @@
 import React from "react";
-import { Row } from "antd";
+import { Button, Row, Tooltip } from "antd";
 import Image from "next/image";
 import classNames from "classnames";
+
+import ItemWithLabel from "@components//ItemWithLabel";
 
 import { AUTHOR_SOCIAL_MEDIA } from "constants/author";
 
@@ -26,19 +28,23 @@ const Banner = ({
         <Image
           src=""
           alt=""
-          className="avatar"
           width={imageWidth}
           height={imageHeight}
+          className="avatar"
         />
         <h2>{authorName}</h2>
         <h3>{authorDesc}</h3>
       </Row>
 
-      <Row className="social-contain">
+      <div className="social-contain">
         {AUTHOR_SOCIAL_MEDIA.map((media: any, index: number) => {
-          return <div key={index}>{media?.name}</div>;
+          return (
+            <div className="social" key={index}>
+              <Image width={20} height={20} src={media.icon} alt={media.name} />
+            </div>
+          );
         })}
-      </Row>
+      </div>
     </div>
   );
 };
