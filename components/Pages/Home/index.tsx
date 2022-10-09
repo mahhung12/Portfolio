@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Element } from "react-scroll";
 
 import Blog from "./components/Blog";
 import About from "./components/About";
@@ -9,11 +10,25 @@ import Contact from "./components/Contact";
 const HomePage = () => {
   return (
     <div className="home-container">
-      <Banner />
-      <About />
-      <WorkExp />
-      <Blog />
-      <Contact />
+      <section id="home">
+        <Banner />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="work">
+        <WorkExp />
+      </section>
+
+      <section id="blog">
+        <Blog />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 };

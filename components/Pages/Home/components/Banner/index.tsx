@@ -36,7 +36,7 @@ const Banner = ({
         <h3>{authorDesc}</h3>
       </Row>
 
-      <div className="social-contain">
+      <Row className="social-contain">
         {AUTHOR_SOCIAL_MEDIA.map((media: any, index: number) => {
           return (
             <div className="social" key={index}>
@@ -44,7 +44,9 @@ const Banner = ({
             </div>
           );
         })}
-      </div>
+      </Row>
+
+      <Row className="mouse-down"></Row>
     </div>
   );
 };

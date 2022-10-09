@@ -4,8 +4,6 @@
   display: flex;
   justify-content: flex-end;
 
-  width: 100%;
-
   position: fixed;
   top: 50px;
   right: 65px;
@@ -27,10 +25,16 @@
   }
 
   .link-active {
+    font-weight: bold;
     border-bottom: 3px solid $selective_yellow;
   }
 
   .contain ~ .contain {
     margin-left: 54px;
   }
+}
+
+.link-active {
+  font-weight: bold;
+  border-bottom: 3px solid $selective_yellow;
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { useRouter } from "next/router";
-
-import AppLink from "@components//AppLink";
+import { Link } from "react-scroll";
 
 import { navigationLink } from "constants/common";
 
@@ -12,15 +11,17 @@ const AppHeader = () => {
   return (
     <div className="header-container">
       {navigationLink.map((link: any, index: number) => (
-        <AppLink
+        <Link
           key={index}
-          className={classNames("contain", {
-            "link-active": link.asPath === router.asPath,
-          })}
-          href={`#${link.direct}`}
+          to={link.direct}
+          duration={500}
+          activeClass="link-active"
+          className="contain"
+          smooth
+          spy
         >
           {link.header}
-        </AppLink>
+        </Link>
       ))}
     </div>
   );

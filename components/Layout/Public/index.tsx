@@ -40,7 +40,7 @@ const Layout: FC<{
         <div className="app-content">
           <BackTop>
             <div className="scroll-to-top">
-              <Image src="/" alt="" />
+              <Image src="/" alt="" layout="fill" />
             </div>
           </BackTop>
           {children}
