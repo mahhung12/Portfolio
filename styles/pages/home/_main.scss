@@ -2,6 +2,8 @@
 @import "./blog";
 @import "./contact";
 @import "./work";
+@import "./about";
 
 .home-container {
+  overflow: hidden;
 }

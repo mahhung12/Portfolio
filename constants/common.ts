@@ -1,7 +1,7 @@
 export const navigationLink = [
   {
     header: "Home",
-    direct: "home",
+    direct: "banner",
     icon: "",
   },
   {

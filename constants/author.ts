@@ -26,3 +26,13 @@ export const AUTHOR_SOCIAL_MEDIA = [
     icon: Linkedin,
   },
 ];
+
+export const AUTHOR_SKILLS = [
+  "React JS",
+  "Next JS",
+  "Typescript",
+  "Node JS",
+  "HTML5 / CSS3 / Javascript",
+  "Figma, Photoshop...",
+  "Library (React JS: zustand, antd, bootstrap...",
+];

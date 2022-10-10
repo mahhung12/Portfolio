@@ -53,12 +53,10 @@
     height: fit-content;
 
     position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translate(50%, -50%);
+    left: 5%;
 
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     justify-content: flex-end;
     gap: 32px 0;
 
