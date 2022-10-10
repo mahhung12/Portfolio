@@ -34,5 +34,18 @@ export const AUTHOR_SKILLS = [
   "Node JS",
   "HTML5 / CSS3 / Javascript",
   "Figma, Photoshop...",
-  "Library (React JS: zustand, antd, bootstrap...",
+  "Library (React JS: redux, zustand, antd...",
 ];
+
+export const USER_TABS = {
+  ALL: "all",
+  BLOCKCHAIN: "blockchain",
+  MAIN: "main",
+  OTHERS: "others",
+};
+
+export const AUTHOR_HEADER_TITLE = {
+  ABOUT: "About",
+  SKILLS: "Skills",
+  WORK: "Work",
+};

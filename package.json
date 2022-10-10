@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ethersproject/bignumber": "^5.7.0",
     "@zeit/next-sass": "^1.0.1",
     "antd": "^4.23.4",
+    "bignumber.js": "^9.1.0",
     "classnames": "^2.3.2",
     "i18n": "^0.15.1",
+    "lodash": "^4.17.21",
     "next": "12.3.1",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.4",

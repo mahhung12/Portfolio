@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import { Link } from "react-scroll";
@@ -6,10 +6,24 @@ import { Link } from "react-scroll";
 import { navigationLink } from "constants/common";
 
 const AppHeader = () => {
-  const router = useRouter();
+  const [visibleHeaderBg, setVisibleHeaderBg] = useState(false);
+
+  const handleScroll = () => setVisibleHeaderBg(window.pageYOffset > 0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   return (
-    <div className="header-container">
+    <div
+      className={classNames("header-container", {
+        "app-header-with-background": visibleHeaderBg,
+      })}
+    >
       {navigationLink.map((link: any, index: number) => (
         <Link
           key={index}

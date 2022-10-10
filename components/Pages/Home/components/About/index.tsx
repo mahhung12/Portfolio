@@ -2,7 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { Badge, Col, Divider, Row } from "antd";
 
-import { AUTHOR_SKILLS } from "constants/author";
+import { AUTHOR_HEADER_TITLE, AUTHOR_SKILLS } from "constants/author";
+import {
+  AUTHOR_NAME,
+  AUTHOR_DESCRIPTION_OBJECTIVES,
+} from "constants/author_text";
+
+const { ABOUT, SKILLS } = AUTHOR_HEADER_TITLE;
 
 const About = () => {
   return (
@@ -15,30 +21,15 @@ const About = () => {
           </div>
         </Col>
         <Col className="about-description">
-          <Divider
-            orientation="left"
-            plain
-            orientationMargin="0"
-            className="title"
-          >
-            About
+          <Divider orientation="left" orientationMargin="0" className="title">
+            {ABOUT}
           </Divider>
 
-          <span className="author-name">Manh Hung</span>
+          <span className="author-name">{AUTHOR_NAME}</span>
+          <span className="desciption">{AUTHOR_DESCRIPTION_OBJECTIVES}</span>
 
-          <span className="desciption">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
-            quisque leo dictum quis turpis. Felis eget porta sem leo ornare nunc
-            lacus.
-          </span>
-
-          <Divider
-            orientation="left"
-            plain
-            orientationMargin="0"
-            className="skills"
-          >
-            Skills
+          <Divider orientation="left" orientationMargin="0" className="skills">
+            {SKILLS}
           </Divider>
 
           <div className="author-skills">

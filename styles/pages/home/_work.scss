@@ -1,0 +1,116 @@
+.work-exp-container {
+  height: 100vh;
+  background: $color_black_v2;
+
+  width: 100%;
+
+  .work-exp-contain {
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 180px;
+
+    .app-tab {
+      width: 100%;
+      margin-top: 15px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        font-family: $blinker;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        /* identical to box height */
+
+        color: $color_white;
+      }
+
+      .ant-tabs-nav::before {
+        border-bottom: unset;
+      }
+
+      .ant-tabs-tab-active {
+        .text {
+          color: $color_white;
+        }
+      }
+
+      .ant-tabs-ink-bar {
+        position: absolute;
+        pointer-events: none;
+        border: 2px solid $color_selective_yeallow;
+      }
+
+      .ant-tabs-tab + .ant-tabs-tab {
+        margin: 0 0 0 50px;
+      }
+    }
+
+    .ant-tabs-tab {
+      color: $color_white;
+    }
+
+    .work-title {
+      font-family: $blinker;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      text-transform: uppercase;
+      line-height: 36px;
+      color: $color_white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ant-divider-horizontal.ant-divider-with-text {
+      display: flex;
+      max-width: 50px;
+      margin: 0;
+      color: $color_white;
+      font-weight: 500;
+      font-size: 16px;
+      white-space: nowrap;
+      text-align: center;
+      border-top-color: $color_white;
+    }
+
+    .ant-divider-horizontal.ant-divider-with-text::after {
+      position: relative;
+      top: 0;
+      width: 50%;
+      border-top: 3px solid transparent;
+      border-top-color: inherit;
+      border-bottom: 0;
+      transform: translateY(50%);
+      content: "";
+    }
+
+    .ant-divider-horizontal.ant-divider-with-text-left.ant-divider-no-default-orientation-margin-left::after {
+      max-width: 50px;
+    }
+  }
+
+  .all-tab,
+  .blockchain-tab,
+  .main-tab,
+  .others-tab {
+    margin-top: 50px;
+    color: $color_white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ant-tabs-content-holder {
+    max-width: 100%;
+    width: 100%;
+  }
+}

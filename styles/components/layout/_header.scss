@@ -1,12 +1,13 @@
 .header-container {
-  padding: 0 20px;
+  padding: 30px 40px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
 
   position: fixed;
-  top: 50px;
-  right: 65px;
+  backdrop-filter: blur(10px);
+
+  z-index: 1;
 
   .contain {
     font-family: $blinker;
@@ -26,7 +27,7 @@
 
   .link-active {
     font-weight: bold;
-    border-bottom: 3px solid $selective_yellow;
+    border-bottom: 3px solid $color_selective_yeallow;
   }
 
   .contain ~ .contain {
@@ -36,5 +37,9 @@
 
 .link-active {
   font-weight: bold;
-  border-bottom: 3px solid $selective_yellow;
+  border-bottom: 3px solid $color_selective_yeallow;
+}
+
+.app-header-with-background {
+  background: $color_night_rider;
 }
