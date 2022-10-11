@@ -22,7 +22,14 @@ const All = () => {
         maskClosable
         centered
       >
-        <ModalContentCustom />
+        <ModalContentCustom
+          breadcrumbs={["1", "2"]}
+          title="mHung"
+          status="In Progress"
+          assignee="mHung"
+          dueDate="Feb 17, 2022"
+          tech="React JS ..."
+        />
       </Modal>
     </div>
   );

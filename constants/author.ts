@@ -49,3 +49,10 @@ export const AUTHOR_HEADER_TITLE = {
   SKILLS: "Skills",
   WORK: "Work",
 };
+
+export const PROJECT_PROPERTIES = {
+  STATUS: "Status",
+  ASSIGNEE: "Assignee",
+  DUEDATE: "Due date",
+  TECHNIQUE: "Technique",
+};
