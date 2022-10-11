@@ -6,6 +6,14 @@
   }
 
   .project-title {
+    font-family: $blinker;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    /* identical to box height */
+
+    // color: $color_trosard;
   }
 
   .project-properties {
