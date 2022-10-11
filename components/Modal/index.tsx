@@ -1,8 +1,8 @@
 import React, { Fragment, FC, ReactNode } from "react";
 import { Modal as ModalAntd, Typography } from "antd";
-import Image from "next/image";
+import Image from "next/future/image";
 
-import CloseCircleLightIcon from "public/image/close_circle_light_icon.png";
+import CloseIcon from "public/svg/close_icon.svg";
 
 const { Title } = Typography;
 
@@ -39,17 +39,13 @@ const Modal: FC<{
       maskClosable={maskClosable || showCloseIcon}
       {...props}
     >
-      <Fragment>
-        {showCloseIcon && (
-          <>
-            <Image
-              src={CloseCircleLightIcon}
-              alt=""
-              onClick={onClose}
-              className="modal-close-mobile-icon cursor-pointer"
-            />
-          </>
-        )}
+      <div className="modal-container">
+        <Image
+          src={CloseIcon}
+          alt=""
+          onClick={onClose}
+          className="modal-close-icon"
+        />
         <div className="modal-wrap">
           {title && (
             <Title level={5} className="title">
@@ -58,7 +54,7 @@ const Modal: FC<{
           )}
           {children}
         </div>
-      </Fragment>
+      </div>
     </ModalAntd>
   );
 };
