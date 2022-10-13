@@ -1,31 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import Blog from "./components/Blog";
-import About from "./components/About";
-import WorkExp from "./components/Work";
-import Banner from "./components/Banner";
-import Contact from "./components/Contact";
+import Blog from './components/Blog';
+import About from './components/About';
+import WorkExp from './components/Work';
+import Banner from './components/Banner';
+import Contact from './components/Contact';
 
 const HomePage = () => {
   return (
-    <div className="home-container">
-      <section id="banner">
+    <div className='home-container'>
+      <section id='banner'>
         <Banner />
       </section>
 
-      <section id="about">
+      <section id='about'>
         <About />
       </section>
 
-      <section id="work">
+      <section id='work'>
         <WorkExp />
       </section>
 
-      <section id="blog">
+      <section id='blog'>
         <Blog />
       </section>
 
-      <section id="contact">
+      <section id='contact'>
         <Contact />
       </section>
     </div>

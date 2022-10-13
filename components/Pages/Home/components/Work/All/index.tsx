@@ -1,53 +1,78 @@
-import React, { useState } from "react";
-import { Button } from "antd";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/future/image';
+import { Carousel, Row } from 'antd';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Grid, Pagination } from 'swiper';
 
-import Modal from "@components//Modal";
-import ModalContentCustom from "@components//Modal/ModalContentCustom";
+import DefaultImage from 'public/image/dark_image.jpg';
 
-import { USER_TABS } from "constants/author";
+import Modal from '@components//Modal';
+import ModalContentCustom from '@components//Modal/ModalContentCustom';
+
+import { AUTHOR_PROJECTS } from 'constants/author_projects';
+import { PROJECT_PROPERTIES, USER_TABS } from 'constants/author';
+
+import 'swiper/css';
+import 'swiper/css/grid';
+import 'swiper/css/pagination';
 
 const { ALL } = USER_TABS;
+const { TYPE, TITLE, STATUS, POSITION, DATE, TECHNIQUE, CONTENT } = PROJECT_PROPERTIES;
 
 const All = () => {
-    const n = 8;
+  const [visible, setVisible] = useState(false);
+  const [projectData, setProjectData] = useState({});
 
-    const [visible, setVisible] = useState(false);
+  const handleSetVisible = () => setVisible(true);
 
-    const handleSetVisible = () => setVisible(true);
+  const handleCloseModal = () => setVisible(false);
 
-    const handleCloseModal = () => setVisible(false);
+  const handleOpenProject = (project: object) => () => {
+    setProjectData(project);
+    handleSetVisible();
+  };
 
-    return (
-        <div className="all-tab">
-            {[...Array(n)].map((e, i) => (
-                <Button onClick={handleSetVisible} key={i}>
-                    Open Modal
-                </Button>
-            ))}
+  return (
+    <div className='all-tab'>
+      <>
+        <Swiper
+          slidesPerView={3}
+          grid={{
+            rows: 2,
+          }}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Grid, Pagination]}
+          className='mySwiper'
+        >
+          {AUTHOR_PROJECTS.map((project, index: number) => (
+            <div className='project-container' key={index}>
+              <Image
+                alt={project?.[TITLE]}
+                src={project?.THUMBNAIL_IMAGE ? project?.THUMBNAIL_IMAGE : DefaultImage}
+                onClick={handleOpenProject(project)}
+                className='project-image'
+              />
+            </div>
+          ))}
+        </Swiper>
+      </>
 
-            <Modal
-                visible={visible}
-                width={650}
-                onClose={handleCloseModal}
-                showCloseIcon
-                maskClosable
-                centered
-            >
-                <ModalContentCustom
-                    breadcrumbs={[ALL, "?"]}
-                    title="mHung"
-                    status="In Progress"
-                    assignee="mHung"
-                    dueDate="Feb 17, 2022"
-                    tech="React JS, Redux..."
-                    content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-                    error exercitationem dolore. Corrupti, id aliquam! Enim eaque
-                    modi laboriosam ipsa doloremque, saepe tempore nulla cumque
-                    exercitationem. Labore iure pariatur eligendi?"
-                />
-            </Modal>
-        </div>
-    );
+      <Modal visible={visible} width={650} onClose={handleCloseModal} showCloseIcon maskClosable centered>
+        <ModalContentCustom
+          date={projectData?.[DATE]}
+          title={projectData?.[TITLE]}
+          status={projectData?.[STATUS]}
+          tech={projectData?.[TECHNIQUE]}
+          content={projectData?.[CONTENT]}
+          position={projectData?.[POSITION]}
+          breadcrumbs={[ALL, projectData?.[TYPE]]}
+        />
+      </Modal>
+    </div>
+  );
 };
 
 export default All;
