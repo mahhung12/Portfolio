@@ -127,3 +127,10 @@ export const navigationLink = [
     icon: "",
   },
 ];
+
+export const PROJECT_STATUS = {
+  PENDING: "Pending",
+  INPROGRESS: "In Progress",
+  RELEASE: "Release",
+  DONE: "Done",
+};

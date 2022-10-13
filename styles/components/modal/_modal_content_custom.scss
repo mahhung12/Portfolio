@@ -1,95 +1,97 @@
 .modal-content-custom {
-    display: flex;
-    flex-flow: column nowrap;
+  display: flex;
+  flex-flow: column nowrap;
 
-    .project-breadcrumb {
-        text-transform: uppercase;
-    }
+  .project-breadcrumb {
+    text-transform: uppercase;
+  }
 
-    .project-title {
-        margin-top: 15px;
+  .project-title {
+    margin-top: 15px;
 
-        font-family: $blinker;
+    font-family: $blinker;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    /* identical to box height */
+
+    // color: $color_trosard;
+  }
+
+  .project-properties {
+    margin-top: 15px;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+
+    .item-with-label {
+      display: flex;
+
+      .label {
+        max-width: 30%;
+        width: 100%;
+        text-align: start;
+
+        font-family: 'Poppins';
         font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
+        font-weight: 400;
+        font-size: 20px;
         letter-spacing: 0.5px;
+        line-height: 24px;
         /* identical to box height */
 
-        // color: $color_trosard;
+        color: $color_trosard;
+      }
+
+      .content {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+      }
+    }
+  }
+
+  .project-description {
+    margin-top: 35px;
+    display: flex;
+    flex-flow: column;
+
+    .desc-title {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration: underline;
     }
 
-    .project-properties {
-        margin-top: 15px;
+    .desc {
+      margin-top: 5px;
 
-        display: grid;
-        grid-template-rows: repeat(4, 1fr);
-        grid-gap: 10px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
 
-        .item-with-label {
-            display: flex;
-
-            .label {
-                max-width: 30%;
-                width: 100%;
-                text-align: start;
-
-                font-family: "Poppins";
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
-                letter-spacing: 0.5px;
-                line-height: 24px;
-                /* identical to box height */
-
-                color: $color_trosard;
-            }
-
-            .content {
-                font-family: "Poppins";
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 24px;
-                /* identical to box height */
-            }
-        }
+      text-align: justify;
     }
+  }
 
-    .project-description {
-        margin-top: 35px;
+  .project-preview {
+    margin-top: 35px;
 
-        .desc-title {
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
-            text-decoration: underline;
-        }
-
-        .desc {
-            margin-top: 5px;
-
-            font-family: "Poppins";
-            font-style: normal;
-            font-size: 16px;
-            line-height: 24px;
-
-            text-align: justify;
-        }
+    .preview-title {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration: underline;
     }
-
-    .project-preview {
-        margin-top: 35px;
-
-        .preview-title {
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
-            text-decoration: underline;
-        }
-    }
+  }
 }

@@ -1,8 +1,8 @@
-@import "normalize";
-@import "variables";
-@import "fonts";
-@import "mixins";
-@import "common";
+@import 'normalize';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'common';
 
 // ultilities
 // @import './ultilities/main';
@@ -11,7 +11,7 @@
 // @import './custom/main';
 
 // components
-@import "./components/main";
+@import './components/main';
 
 // page
-@import "./pages/main";
+@import './pages/main';

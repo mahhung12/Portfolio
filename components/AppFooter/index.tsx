@@ -1,8 +1,7 @@
-import { Button, Tooltip } from "antd";
-import React from "react";
+import React from 'react';
 
 const AppFooter = () => {
-  return <div className="footer-container">Footer</div>;
+  return <div className='footer-container'>Footer</div>;
 };
 
 export default AppFooter;
