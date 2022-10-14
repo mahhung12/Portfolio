@@ -31,16 +31,16 @@ const All = () => {
   return (
     <div className='all-tab'>
       <Swiper
-        grid={{ rows: 2 }}
+        grid={{ rows: 2, fill: 'row' }}
         spaceBetween={32}
         modules={[Grid, Pagination]}
-        slidesPerView={MAX_SLIDE_ITEM}
+        slidesPerView={4}
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-        effect='fade'
+        // loop={true}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
+        // effect='fade'
         className='mySwiper'
-        navigation
       >
         {AUTHOR_PROJECTS.map((project, index: number) => (
           <SwiperSlide className='project-container' key={index}>

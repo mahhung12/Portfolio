@@ -100,7 +100,7 @@
   .blockchain-tab,
   .main-tab,
   .others-tab {
-    margin-top: 50px;
+    margin-top: 60px;
     color: $color_white;
 
     display: flex;
@@ -121,22 +121,10 @@
     margin: 0 auto;
 
     .mySwiper {
-      width: 100%;
+      padding-bottom: 60px;
 
-      .swiper-wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 25px;
-        justify-content: space-between;
-
-        .project-image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-
-          border-radius: 20px;
-        }
+      .swiper-pagination-bullet {
+        background: $color_selective_yeallow;
       }
     }
 
@@ -144,19 +132,132 @@
       background: $color_tablie;
       border-radius: 20px;
       padding: 1px;
-      // margin: 0 auto;
-      margin: 0 !important;
 
-      width: 250px !important;
-      height: 150px;
+      height: 150px !important;
 
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
+      &:hover {
+        @include hoverPointer();
+      }
 
-      // &:hover {
-      //   @include hoverPointer();
-      // }
+      // 1151
+      @media screen and (max-width: $breakpoint_ultra_tablet_max) {
+        width: 100%;
+      }
+
+      .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  // BlockChain
+  .blockchain-tab {
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    .mySwiper {
+      padding-bottom: 60px;
+
+      .swiper-pagination-bullet {
+        background: $color_selective_yeallow;
+      }
+    }
+
+    .project-container {
+      background: $color_tablie;
+      border-radius: 20px;
+      padding: 1px;
+
+      height: 150px !important;
+
+      &:hover {
+        @include hoverPointer();
+      }
+
+      // 1151
+      @media screen and (max-width: $breakpoint_ultra_tablet_max) {
+        width: 100%;
+      }
+
+      .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  // Main
+  .main-tab {
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    .mySwiper {
+      padding-bottom: 60px;
+
+      .swiper-pagination-bullet {
+        background: $color_selective_yeallow;
+      }
+    }
+
+    .project-container {
+      background: $color_tablie;
+      border-radius: 20px;
+      padding: 1px;
+
+      height: 150px !important;
+
+      &:hover {
+        @include hoverPointer();
+      }
+
+      // 1151
+      @media screen and (max-width: $breakpoint_ultra_tablet_max) {
+        width: 100%;
+      }
+
+      .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  // Others
+  .others-tab {
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    .mySwiper {
+      padding-bottom: 60px;
+
+      .swiper-pagination-bullet {
+        background: $color_selective_yeallow;
+      }
+    }
+
+    .project-container {
+      background: $color_tablie;
+      border-radius: 20px;
+      padding: 1px;
+
+      height: 150px !important;
+
+      &:hover {
+        @include hoverPointer();
+      }
 
       // 1151
       @media screen and (max-width: $breakpoint_ultra_tablet_max) {

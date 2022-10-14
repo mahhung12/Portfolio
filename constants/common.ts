@@ -9,7 +9,7 @@ export const IMAGE_TYPE = 'image/png';
 export const EMPTY_DEFAULT_TEXT = '--';
 
 export const ZERO_VALUE = 0;
-export const MAX_SLIDE_ITEM = 5;
+export const MAX_SLIDE_ITEM = 4;
 export const MAX_LENGTH_PRICE = 12;
 export const NFT_DECIMAL_SCALE = 2;
 export const MAX_LENGTH_SHOW_DESCRIPTION = 290;
