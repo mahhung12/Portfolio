@@ -1,8 +1,6 @@
 import React from "react";
 import { NextSeo } from "next-seo";
 
-import favicon from "public/favicon.ico";
-
 import LENGTH_CONSTANTS from "constants/length";
 
 const { MAX_LENGTH_DESCRIPTION } = LENGTH_CONSTANTS;
@@ -14,16 +12,8 @@ type AppSeoProps = {
   faviconImageUrl?: string;
 };
 
-const AppSeo = ({
-  title,
-  metaDescription,
-  socialImageUrl,
-  faviconImageUrl,
-}: AppSeoProps) => {
-  const metaDescriptionSeo = metaDescription?.substring(
-    0,
-    MAX_LENGTH_DESCRIPTION
-  );
+const AppSeo = ({ title, metaDescription, socialImageUrl, faviconImageUrl }: AppSeoProps) => {
+  const metaDescriptionSeo = metaDescription?.substring(0, MAX_LENGTH_DESCRIPTION);
   const defaultPreviewImage = process.env.NEXT_PUBLIC_IMAGE_SEO || "";
   const defaultTitle = "Portfolio";
   const defaultMetaDescription = "";
@@ -52,7 +42,7 @@ const AppSeo = ({
         {
           rel: "icon",
           type: "image/png",
-          href: (faviconImageUrl || favicon) as any,
+          href: faviconImageUrl as any,
         },
       ]}
       additionalMetaTags={[
