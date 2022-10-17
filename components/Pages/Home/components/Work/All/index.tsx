@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/future/image";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import DefaultImage from "public/image/dark_image.jpg";
 
