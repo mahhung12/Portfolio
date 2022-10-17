@@ -77,11 +77,13 @@ const ModalContentCustom = ({
           <div className="desc">{content}</div>
         </Row>
 
-        <Row className="project-preview">
-          <EllipsisText className="preview-title" text="Preview" />
+        {image && (
+          <Row className="project-preview">
+            <EllipsisText className="preview-title" text="Preview" />
 
-          <Image src={image} alt="" className="project-image" />
-        </Row>
+            <Image src={image} alt="" className="project-image" />
+          </Row>
+        )}
       </Col>
     </Row>
   );

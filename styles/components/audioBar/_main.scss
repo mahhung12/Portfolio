@@ -1,0 +1,14 @@
+.app-audio-bar {
+  width: 100%;
+
+  .audio-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 9999;
+
+    font-size: 30px;
+    color: $color_white;
+  }
+}

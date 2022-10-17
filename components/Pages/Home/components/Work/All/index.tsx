@@ -10,6 +10,7 @@ import ModalContentCustom from "@components//Modal/ModalContentCustom";
 
 import { AUTHOR_PROJECTS } from "constants/author_projects";
 import { PROJECT_PROPERTIES, USER_TABS } from "constants/author";
+import { Tooltip } from "antd";
 
 const { ALL } = USER_TABS;
 const { IMAGE, TYPE, TITLE, STATUS, POSITION, DATE, TECHNIQUE, CONTENT } = PROJECT_PROPERTIES;
@@ -24,9 +25,6 @@ const All = () => {
 
   const handleOpenProject = (project: object) => () => {
     setProjectData(project);
-
-    console.log("projectData :>> ", projectData);
-
     handleSetVisible();
   };
 
@@ -42,12 +40,14 @@ const All = () => {
       >
         {AUTHOR_PROJECTS.map((project, index: number) => (
           <SwiperSlide className="project-container" key={index}>
-            <Image
-              alt={project?.[TITLE]}
-              src={project?.image ? project?.image : DefaultImage}
-              onClick={handleOpenProject(project)}
-              className="project-image"
-            />
+            <Tooltip placement="top" title={project.title} overlayClassName="tooltip-container">
+              <Image
+                alt={project?.[TITLE]}
+                src={project?.image ? project?.image : DefaultImage}
+                onClick={handleOpenProject(project)}
+                className="project-image"
+              />
+            </Tooltip>
           </SwiperSlide>
         ))}
       </Swiper>
