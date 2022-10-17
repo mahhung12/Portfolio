@@ -21,7 +21,7 @@
       user-select: none;
       text-transform: uppercase;
 
-      font-family: 'Poppins';
+      font-family: "Poppins";
       font-style: normal;
       font-weight: 400;
       font-size: 24px;
@@ -57,7 +57,7 @@
       border-top-color: inherit;
       border-bottom: 0;
       transform: translateY(50%);
-      content: '';
+      content: "";
     }
 
     .ant-divider-horizontal.ant-divider-with-text-left.ant-divider-no-default-orientation-margin-left::after {
@@ -69,6 +69,15 @@
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    padding-bottom: 60px;
+
+    .swiper-pagination-bullet {
+      background: $color_selective_yeallow;
+    }
+
+    .swiper-pagination-bullet ~ .swiper-pagination-bullet {
+      margin-left: 10px;
+    }
 
     .blog-wrapper {
       background: $color_black_v2;
@@ -94,7 +103,7 @@
 
       .description {
         margin-top: 15px;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;

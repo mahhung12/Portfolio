@@ -88,7 +88,7 @@
       border-top-color: inherit;
       border-bottom: 0;
       transform: translateY(50%);
-      content: '';
+      content: "";
     }
 
     .ant-divider-horizontal.ant-divider-with-text-left.ant-divider-no-default-orientation-margin-left::after {
@@ -167,6 +167,10 @@
 
       .swiper-pagination-bullet {
         background: $color_selective_yeallow;
+      }
+
+      .swiper-pagination-bullet ~ .swiper-pagination-bullet {
+        margin-left: 10px;
       }
     }
 
