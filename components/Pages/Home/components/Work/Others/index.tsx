@@ -36,10 +36,6 @@ const Others = () => {
         modules={[Grid, Pagination]}
         slidesPerView={4}
         pagination={{ clickable: true }}
-        // loop={true}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
-        // effect='fade'
         className='mySwiper'
       >
         {AUTHOR_PROJECTS.map((project, index: number) => (

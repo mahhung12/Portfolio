@@ -48,6 +48,7 @@ export const AUTHOR_HEADER_TITLE = {
   ABOUT: 'About',
   SKILLS: 'Skills',
   WORK: 'Work',
+  BLOG: 'Blog',
 };
 
 export const AUTHOR_POSITION_ON_ROLES = {

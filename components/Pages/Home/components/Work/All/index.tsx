@@ -8,7 +8,6 @@ import DefaultImage from 'public/image/dark_image.jpg';
 import Modal from '@components//Modal';
 import ModalContentCustom from '@components//Modal/ModalContentCustom';
 
-import { MAX_SLIDE_ITEM } from 'constants/common';
 import { AUTHOR_PROJECTS } from 'constants/author_projects';
 import { PROJECT_PROPERTIES, USER_TABS } from 'constants/author';
 
@@ -36,10 +35,6 @@ const All = () => {
         modules={[Grid, Pagination]}
         slidesPerView={4}
         pagination={{ clickable: true }}
-        // loop={true}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
-        // effect='fade'
         className='mySwiper'
       >
         {AUTHOR_PROJECTS.map((project, index: number) => (
