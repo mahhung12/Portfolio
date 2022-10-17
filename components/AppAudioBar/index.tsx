@@ -1,5 +1,6 @@
+import React, { Fragment, useState, useEffect, ReactNode } from "react";
 import classNames from "classnames";
-import React, { Fragment, ReactNode } from "react";
+import { motion } from "framer-motion";
 
 export interface AppAudioBarProps {
   className?: string;
@@ -8,10 +9,41 @@ export interface AppAudioBarProps {
 }
 
 const AppAudioBar = ({ className, children, toogleElement, ...props }: AppAudioBarProps) => {
+  const [mousePosition, setMousePotition] = useState({
+    x: 0,
+    y: 0,
+  });
+
+  console.log("mousePosition", mousePosition);
+
+  useEffect(() => {
+    const mouseMove = (e: any) => {
+      setMousePotition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 64,
+      y: mousePosition.y - 64,
+      backgroundColor: "khaki",
+      mixBlendMode: "difference",
+    },
+  };
+
   return (
     <Fragment>
       <div className={classNames("app-audio-bar", className)} {...props}>
-        <span className="audio-bar-container">Play</span>
+        <motion.div className="audio-bar-container cursor-animations" variants={variants} animate="default" />
         {children}
       </div>
     </Fragment>

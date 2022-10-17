@@ -1,14 +1,15 @@
 .app-audio-bar {
   width: 100%;
 
-  .audio-bar-container {
+  .cursor-animations {
     position: fixed;
     top: 0;
     left: 0;
 
-    z-index: 9999;
-
-    font-size: 30px;
+    // color: $color_semi_black;
     color: $color_white;
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
   }
 }
