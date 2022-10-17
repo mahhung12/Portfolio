@@ -11,4 +11,8 @@ export const AUTHOR_BLOG = [
     title: '#3 - H',
     description: '01/01/2021',
   },
+  {
+    title: '#3 - H',
+    description: '01/01/2021',
+  },
 ];
