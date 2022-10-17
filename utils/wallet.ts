@@ -1,3 +1,5 @@
+export const none = {};
+
 // import { APP_NETWORKS_SUPPORT } from "connectors/constants";
 
 // declare let window: any;

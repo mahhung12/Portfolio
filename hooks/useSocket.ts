@@ -1,3 +1,5 @@
+export const none = {};
+
 // import { useEffect } from 'react';
 // import { cloneWith, isArray } from 'lodash';
 

@@ -1,3 +1,5 @@
+export const none = {};
+
 // import { checkSuccessRequest } from 'services/api';
 // import transactionServices from 'services/transaction';
 
