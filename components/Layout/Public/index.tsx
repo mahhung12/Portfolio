@@ -16,24 +16,10 @@ const Layout: FC<{
   socialImageUrl?: string;
   metaDescription?: string;
   faviconImageUrl?: string;
-}> = ({
-  children,
-  className,
-  title = "",
-  notShowFooter,
-  notShowHeader,
-  socialImageUrl,
-  faviconImageUrl,
-  metaDescription,
-}) => {
+}> = ({ children, className, title = "", notShowFooter, notShowHeader, socialImageUrl, faviconImageUrl, metaDescription }) => {
   return (
     <Spin indicator={<LoadingIcon />} spinning={false}>
-      <AppSeo
-        title={title}
-        socialImageUrl={socialImageUrl}
-        faviconImageUrl={faviconImageUrl}
-        metaDescription={metaDescription}
-      />
+      <AppSeo title={title} socialImageUrl={socialImageUrl} faviconImageUrl={faviconImageUrl} metaDescription={metaDescription} />
 
       <div className={className}>
         {!notShowHeader && <AppHeader />}

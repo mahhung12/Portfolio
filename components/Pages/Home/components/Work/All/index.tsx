@@ -12,7 +12,7 @@ import { AUTHOR_PROJECTS } from "constants/author_projects";
 import { PROJECT_PROPERTIES, USER_TABS } from "constants/author";
 
 const { ALL } = USER_TABS;
-const { TYPE, TITLE, STATUS, POSITION, DATE, TECHNIQUE, CONTENT } = PROJECT_PROPERTIES;
+const { IMAGE, TYPE, TITLE, STATUS, POSITION, DATE, TECHNIQUE, CONTENT } = PROJECT_PROPERTIES;
 
 const All = () => {
   const [visible, setVisible] = useState(false);
@@ -24,6 +24,8 @@ const All = () => {
 
   const handleOpenProject = (project: object) => () => {
     setProjectData(project);
+
+    console.log("projectData :>> ", projectData);
 
     handleSetVisible();
   };
@@ -42,7 +44,7 @@ const All = () => {
           <SwiperSlide className="project-container" key={index}>
             <Image
               alt={project?.[TITLE]}
-              src={project?.THUMBNAIL_IMAGE ? project?.THUMBNAIL_IMAGE : DefaultImage}
+              src={project?.image ? project?.image : DefaultImage}
               onClick={handleOpenProject(project)}
               className="project-image"
             />
@@ -50,8 +52,9 @@ const All = () => {
         ))}
       </Swiper>
 
-      <Modal visible={visible} width={650} onClose={handleCloseModal} showCloseIcon maskClosable centered>
+      <Modal visible={visible} width={700} onClose={handleCloseModal} showCloseIcon maskClosable centered>
         <ModalContentCustom
+          image={projectData?.[IMAGE]}
           date={projectData?.[DATE]}
           title={projectData?.[TITLE]}
           status={projectData?.[STATUS]}
