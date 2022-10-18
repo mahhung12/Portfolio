@@ -45,6 +45,7 @@ export const USER_TABS = {
 };
 
 export const AUTHOR_HEADER_TITLE = {
+  CAREER: "Career",
   ABOUT: "About",
   SKILLS: "Skills",
   WORK: "Work",

@@ -14,8 +14,6 @@ const AppAudioBar = ({ className, children, toogleElement, ...props }: AppAudioB
     y: 0,
   });
 
-  console.log("mousePosition", mousePosition);
-
   useEffect(() => {
     const mouseMove = (e: any) => {
       setMousePotition({
@@ -33,9 +31,9 @@ const AppAudioBar = ({ className, children, toogleElement, ...props }: AppAudioB
 
   const variants = {
     default: {
-      x: mousePosition.x - 64,
-      y: mousePosition.y - 64,
-      backgroundColor: "khaki",
+      x: mousePosition.x - 32,
+      y: mousePosition.y - 32,
+      backgroundColor: "#424030",
       mixBlendMode: "difference",
     },
   };

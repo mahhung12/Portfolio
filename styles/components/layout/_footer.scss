@@ -1,4 +1,19 @@
 .footer-container {
   text-align: center;
   width: 100%;
+
+  background-color: $color_mine_shaft;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  /* identical to box height */
+
+  color: #edbcbc;
 }

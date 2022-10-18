@@ -2,13 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div
-      style={{
-        border: "1px solid red",
-        height: "100vh",
-        backgroundColor: "#020202",
-      }}
-    >
+    <div className="contact-container">
       <span style={{ color: "#fff" }}>Contact</span>
     </div>
   );
