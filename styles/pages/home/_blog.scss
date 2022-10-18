@@ -1,10 +1,9 @@
 .blog-container {
-  height: calc(100vh);
+  height: 100vh;
   background-color: $color_mine_shaft;
 
   max-width: 100%;
   width: 100%;
-
   margin: 0 auto;
 
   display: flex;
@@ -15,6 +14,9 @@
     max-width: 1000px;
     width: 100%;
     height: fit-content;
+
+    position: relative;
+    z-index: 2;
 
     .blog-title {
       color: $color_white;
@@ -33,6 +35,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      position: relative;
+      z-index: 3;
     }
 
     .ant-divider-horizontal.ant-divider-with-text {
@@ -63,6 +68,20 @@
     .ant-divider-horizontal.ant-divider-with-text-left.ant-divider-no-default-orientation-margin-left::after {
       max-width: 50px;
     }
+
+    .blog-background-video {
+      height: 100vh;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      z-index: 0;
+
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+    }
   }
 
   .mySwiper {
@@ -70,6 +89,9 @@
     justify-content: space-between;
     margin-top: 30px;
     padding-bottom: 60px;
+
+    max-width: 100%;
+    width: 100%;
 
     .swiper-pagination-bullet {
       background: $color_selective_yeallow;
