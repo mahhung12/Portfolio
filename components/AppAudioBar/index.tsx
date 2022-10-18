@@ -36,7 +36,7 @@ const AppAudioBar = ({ className, children, toogleElement, ...props }: AppAudioB
       backgroundColor: "#424030",
       mixBlendMode: "difference",
     },
-  };
+  } as any;
 
   return (
     <Fragment>
