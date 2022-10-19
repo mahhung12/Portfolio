@@ -1,156 +1,156 @@
 .about-container {
-    height: 100vh;
-    background-color: $color_mine_shaft;
+  height: 100vh;
+  background-color: $color_mine_shaft;
 
-    max-width: 100%;
+  max-width: 100%;
+  width: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__contain {
+    max-width: 1000px;
     width: 100%;
+    height: fit-content;
 
-    margin: 0 auto;
+    color: $color_white;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
 
-    &__contain {
-        max-width: 1000px;
-        width: 100%;
-        height: fit-content;
+    .about-image {
+      position: relative;
+      height: 420px;
+
+      max-width: 320px;
+      width: 100%;
+
+      .first-card,
+      .second-card {
+        width: 320px;
+        height: 420px;
+
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        border-radius: 20px;
+      }
+
+      .first-card {
+        background: $color_trout_draw;
+        transform: rotate(-7.17deg);
+      }
+
+      .second-card {
+        bottom: 0;
+        background: $color_tablie;
+      }
+    }
+
+    .about-description {
+      margin-left: 100px;
+      max-width: 100%;
+      width: 100%;
+
+      .title {
+        color: $color_white;
+        user-select: none;
+        text-transform: uppercase;
+      }
+
+      .ant-divider-horizontal.ant-divider-with-text {
+        display: flex;
+        max-width: 50px;
+        margin: 16px 0;
+        font-weight: 500;
+        font-size: 16px;
+
+        color: $color_white;
+        border-top-color: $color_white;
+
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .ant-divider-horizontal.ant-divider-with-text::after {
+        position: relative;
+        top: 50%;
+        width: 50%;
+        border-top: 3px solid transparent;
+        border-top-color: inherit;
+        border-bottom: 0;
+        transform: translateY(50%);
+        content: "";
+      }
+
+      .ant-divider-horizontal.ant-divider-with-text-left.ant-divider-no-default-orientation-margin-left::after {
+        max-width: 50px;
+      }
+
+      .author-name {
+        font-family: "Permanent Marker";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 52px;
+        user-select: none;
+
+        color: $color_selective_yeallow;
+      }
+
+      .desciption {
+        margin-top: 25px;
+        display: block;
+        user-select: none;
+
+        font-family: $blinker;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: justify;
+        line-height: 24px;
+
+        color: $color_white;
+      }
+
+      .skills {
+        text-transform: uppercase;
+        margin-top: 45px !important;
+      }
+
+      .author-skills {
+        margin-top: 14px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px 20px;
+
+        font-family: $blinker;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height */
 
         color: $color_white;
 
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row nowrap;
+        .skill {
+          .ant-badge-status-text {
+            font-family: $blinker;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height */
 
-        .about-image {
-            position: relative;
-            height: 420px;
-
-            max-width: 320px;
-            width: 100%;
-
-            .first-card,
-            .second-card {
-                width: 320px;
-                height: 420px;
-
-                position: absolute;
-                top: 0%;
-                left: 0%;
-                border-radius: 20px;
-            }
-
-            .first-card {
-                background: $color_trout_draw;
-                transform: rotate(-7.17deg);
-            }
-
-            .second-card {
-                bottom: 0;
-                background: $color_tablie;
-            }
+            color: $color_white !important;
+          }
         }
-
-        .about-description {
-            margin-left: 50px;
-            max-width: 100%;
-            width: 100%;
-
-            .title {
-                color: $color_white;
-                user-select: none;
-                text-transform: uppercase;
-            }
-
-            .ant-divider-horizontal.ant-divider-with-text {
-                display: flex;
-                max-width: 50px;
-                margin: 16px 0;
-                font-weight: 500;
-                font-size: 16px;
-
-                color: $color_white;
-                border-top-color: $color_white;
-
-                text-align: center;
-                white-space: nowrap;
-            }
-
-            .ant-divider-horizontal.ant-divider-with-text::after {
-                position: relative;
-                top: 50%;
-                width: 50%;
-                border-top: 3px solid transparent;
-                border-top-color: inherit;
-                border-bottom: 0;
-                transform: translateY(50%);
-                content: "";
-            }
-
-            .ant-divider-horizontal.ant-divider-with-text-left.ant-divider-no-default-orientation-margin-left::after {
-                max-width: 50px;
-            }
-
-            .author-name {
-                font-family: "Permanent Marker";
-                font-style: normal;
-                font-weight: 400;
-                font-size: 36px;
-                line-height: 52px;
-                user-select: none;
-
-                color: $color_selective_yeallow;
-            }
-
-            .desciption {
-                margin-top: 25px;
-                display: block;
-                user-select: none;
-
-                font-family: $blinker;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                text-align: justify;
-                line-height: 24px;
-
-                color: $color_white;
-            }
-
-            .skills {
-                text-transform: uppercase;
-                margin-top: 45px !important;
-            }
-
-            .author-skills {
-                margin-top: 14px;
-
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 10px 40px;
-
-                font-family: $blinker;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 24px;
-                /* identical to box height */
-
-                color: $color_white;
-
-                .skill {
-                    .ant-badge-status-text {
-                        font-family: $blinker;
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 24px;
-                        /* identical to box height */
-
-                        color: $color_white !important;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }
