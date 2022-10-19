@@ -4,26 +4,45 @@ import Instagram from "public/svg/InstagramNegative.svg";
 import Linkedin from "public/svg/LinkedinNegative.svg";
 import Telegram from "public/svg/TelegramNegative.svg";
 
+import CSS from "public/svg/tech/css.svg";
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+// import  from 'public/svg/tech/css.svg'
+
 export const AUTHOR_SOCIAL_MEDIA = [
   {
     name: "github",
     icon: Github,
+    url: "https://github.com/mahhung12",
   },
   {
     name: "instagram",
     icon: Instagram,
+    url: "https://www.instagram.com/",
   },
   {
     name: "facebook",
     icon: Facebook,
+    url: "https://www.facebook.com/",
   },
   {
     name: "telegram",
     icon: Telegram,
+    url: "https://web.telegram.org/k/",
   },
   {
     name: "linkedin",
     icon: Linkedin,
+    url: "https://www.linkedin.com/in/hung-hung-887199212/",
   },
 ];
 
@@ -33,8 +52,7 @@ export const AUTHOR_SKILLS = [
   "Typescript",
   "Node JS",
   "HTML5 / CSS3 / Javascript",
-  "Figma, Photoshop...",
-  "Library (React JS: redux, zustand, antd...",
+  "Library (redux, zustand...)",
 ];
 
 export const USER_TABS = {

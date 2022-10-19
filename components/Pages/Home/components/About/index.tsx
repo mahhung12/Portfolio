@@ -3,10 +3,7 @@ import Image from "next/image";
 import { Badge, Col, Divider, Row } from "antd";
 
 import { AUTHOR_HEADER_TITLE, AUTHOR_SKILLS } from "constants/author";
-import {
-  AUTHOR_NAME,
-  AUTHOR_DESCRIPTION_OBJECTIVES,
-} from "constants/author_text";
+import { AUTHOR_NAME, AUTHOR_DESCRIPTION_OBJECTIVES } from "constants/author_text";
 
 const { ABOUT, SKILLS } = AUTHOR_HEADER_TITLE;
 
@@ -34,16 +31,13 @@ const About = () => {
 
           <div className="author-skills">
             {AUTHOR_SKILLS.map((skill: string, idx: number) => (
-              <Badge
-                key={idx}
-                status="success"
-                size="default"
-                title="that is my skill"
-                text={skill}
-                className="skill"
-              />
+              <Badge key={idx} status="success" size="default" title="that is my skill" text={skill} className="skill" />
             ))}
           </div>
+
+          <Divider orientation="left" orientationMargin="0" className="skills">
+            {SKILLS}
+          </Divider>
         </Col>
       </Row>
     </div>
