@@ -1,51 +1,51 @@
-import React, { memo, FC, Fragment, useEffect, useState, ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Field, ErrorMessage, FieldInputProps, FieldConfig, FormikProps } from 'formik';
-import { Input, Select, Checkbox, Switch, DatePicker, Radio, AutoComplete, Slider, Image, Row } from 'antd';
-import cx from 'classnames';
-import { trim } from 'lodash';
+import React, { memo, FC, Fragment, useEffect, useState, ReactNode } from "react";
+import { useTranslation } from "react-i18next";
+import { Field, ErrorMessage, FieldInputProps, FieldConfig, FormikProps } from "formik";
+import { Input, Select, Checkbox, Switch, DatePicker, Radio, AutoComplete, Slider, Image, Row } from "antd";
+import cx from "classnames";
+import { trim } from "lodash";
 
-import EllipsisText from '../EllipsisText';
-import NumberFormat from 'components/NumberFormat';
-import InfinityScrollSelect from 'components/InfinityScrollSelect';
+import EllipsisText from "../EllipsisText";
+import NumberFormat from "components/NumberFormat";
+import InfinityScrollSelect from "components/InfinityScrollSelect";
 
-import NodataIcon from 'public/images/no_nft_icon.png';
-import EyeIcon from 'public/svg/EyeIcon';
-import IconCalendar from 'public/svg/CalendarIcon';
-import EyeInvisibleIcon from 'public/svg/EyeInvisibleIcon';
+import EyeIcon from "public/svg/EyeIcon";
+import IconCalendar from "public/svg/CalendarIcon";
+import NodataIcon from "public/images/no_nft_icon.png";
+import EyeInvisibleIcon from "public/svg/EyeInvisibleIcon";
 
-import validate from 'utils/validate';
+import validate from "utils/validate";
 
-import LENGTH_CONSTANTS from 'constants/length';
-import { FORMAT_DATE_PICKER } from 'constants/common';
+import LENGTH_CONSTANTS from "constants/length";
+import { FORMAT_DATE_PICKER } from "constants/common";
 
 const { Password, Search, TextArea } = Input;
 const CheckboxGroup = Checkbox.Group;
 const { Option } = Select;
 
 const levelPassword = [
-  { level: 0, text: 'common.low' },
-  { level: 1, text: 'common.low' },
-  { level: 2, text: 'common.medium' },
-  { level: 3, text: 'common.high' },
-  { level: 4, text: 'common.high' },
+  { level: 0, text: "common.low" },
+  { level: 1, text: "common.low" },
+  { level: 2, text: "common.medium" },
+  { level: 3, text: "common.high" },
+  { level: 4, text: "common.high" },
 ];
 
 export const TYPE_INPUT = {
-  TEXT: 'TEXT',
-  TEXTAREA: 'TEXTAREA',
-  DATE: 'DATE',
-  PASSWORD: 'PASSWORD',
-  SELECT: 'SELECT',
-  CHECKBOX: 'CHECKBOX',
-  CHECKBOXGROUP: 'CHECKBOXGROUP',
-  NUMBER: 'NUMBER',
-  SEARCH: 'SEARCH',
-  SELECT_INFINITY_SCROLL: 'SELECT_INFINITY_SCROLL',
-  SWITCH: 'SWITCH',
-  RADIO: 'RADIO',
-  AUTOCOMPLETE: 'AUTOCOMPLETE',
-  RANGE: 'RANGE',
+  TEXT: "TEXT",
+  TEXTAREA: "TEXTAREA",
+  DATE: "DATE",
+  PASSWORD: "PASSWORD",
+  SELECT: "SELECT",
+  CHECKBOX: "CHECKBOX",
+  CHECKBOXGROUP: "CHECKBOXGROUP",
+  NUMBER: "NUMBER",
+  SEARCH: "SEARCH",
+  SELECT_INFINITY_SCROLL: "SELECT_INFINITY_SCROLL",
+  SWITCH: "SWITCH",
+  RADIO: "RADIO",
+  AUTOCOMPLETE: "AUTOCOMPLETE",
+  RANGE: "RANGE",
 };
 
 export const RangeInput: FC<{
@@ -113,9 +113,9 @@ export const AutoCompleteInput: FC<{
       {/* <Input {...props} {...field} placeholder={placeholder} onBlur={handleBlur} /> */}
       {options?.map((item: any) => (
         <Option value={item?.value} key={item?.value}>
-          <div className='option-content'>
-            <Row className='option-value'>{item?.value}</Row>
-            <Row className='option-label'>{item?.label}</Row>
+          <div className="option-content">
+            <Row className="option-value">{item?.value}</Row>
+            <Row className="option-label">{item?.label}</Row>
           </div>
         </Option>
       ))}
@@ -190,7 +190,7 @@ export const InputTextArea: FC<{
   };
 
   return (
-    <div className='text-area'>
+    <div className="text-area">
       <TextArea
         rows={5}
         maxLength={maxLengthTextarea}
@@ -269,7 +269,7 @@ export const NumberInput: FC<{
       />
 
       {suffix && <img src={suffix} />}
-      {unit && <span className='unit'>{unit}</span>}
+      {unit && <span className="unit">{unit}</span>}
     </Fragment>
   );
 };
@@ -294,24 +294,22 @@ export const PasswordInput: FC<{
   const fieldVal = field.value;
   const addClassLevel =
     validate.passwordStrength(fieldVal) < 2
-      ? 'input__label--low'
+      ? "input__label--low"
       : validate.passwordStrength(fieldVal) < 3
-      ? 'input__label--medium'
+      ? "input__label--medium"
       : validate.passwordStrength(fieldVal) < 5
-      ? 'input__label--high'
-      : '';
-  const { t } = useTranslation('common');
+      ? "input__label--high"
+      : "";
+  const { t } = useTranslation("common");
   return (
     <>
       {label && showLevelPassword && (
-        <div className={cx('form-item__label', labelClassName)}>
+        <div className={cx("form-item__label", labelClassName)}>
           {!!fieldVal && !!showLevelPassword && (
-            <div className='input__label--level'>
+            <div className="input__label--level">
               {levelPassword.map((item) => (
                 <span
-                  className={`input__label--level-item ${
-                    item.level <= validate.passwordStrength(fieldVal) && addClassLevel
-                  }`}
+                  className={`input__label--level-item ${item.level <= validate.passwordStrength(fieldVal) && addClassLevel}`}
                   key={item.level}
                 />
               ))}
@@ -361,7 +359,7 @@ export const SelectInput: FC<{
 }) => {
   const { t } = useTranslation();
 
-  const ALL_OPTIONS = 'all-options';
+  const ALL_OPTIONS = "all-options";
   const [indeterminate, setIndeterminate] = useState(true);
   const [checkAll, setCheckAll] = useState(false);
   const { value } = field;
@@ -373,7 +371,7 @@ export const SelectInput: FC<{
 
   const onCheckAllOptions = (event: any) => {
     const { checked } = event.target;
-    let values = [];
+    let values = [] as any;
     if (checked) {
       values = options.map((option) => option.value);
     } else {
@@ -388,9 +386,9 @@ export const SelectInput: FC<{
     switch (optionsType) {
       case TYPE_INPUT.CHECKBOX: {
         return (
-          <div className='search-form__all-options'>
+          <div className="search-form__all-options">
             <Checkbox onChange={onCheckAllOptions} id={ALL_OPTIONS} indeterminate={indeterminate} checked={checkAll}>
-              {t('common.txt_all')}
+              {t("common.txt_all")}
             </Checkbox>
           </div>
         );
@@ -414,7 +412,7 @@ export const SelectInput: FC<{
         return item?.url || item?.urlImage ? (
           <>
             {item?.url || <Image width={24} height={24} src={item?.urlImage} alt={item?.value} preview={false} />}
-            <EllipsisText text={item?.name} className='price-name' />
+            <EllipsisText text={item?.name} className="price-name" />
           </>
         ) : (
           item.name
@@ -446,9 +444,9 @@ export const SelectInput: FC<{
         placeholder={placeholder}
         onChange={onChangeSelect}
         notFoundContent={
-          <div className='ant-empty-text'>
-            <img src={NodataIcon} width='100%' />
-            <p>{t('common.txt_no_data')}</p>
+          <div className="ant-empty-text">
+            <Image src={NodataIcon as any} alt="" width="100%" />
+            <p>{t("common.txt_no_data")}</p>
           </div>
         }
         dropdownRender={(menu) => {
@@ -731,15 +729,15 @@ const FormItem = ({
   }
 
   return (
-    <div className={cx(containerClassName, 'form-item')}>
+    <div className={cx(containerClassName, "form-item")}>
       {label && (
-        <div className={cx(labelClassName, 'form-item__label')}>
-          {label}&nbsp;{required ? '*' : ''} {labelTootip ?? ''}
+        <div className={cx(labelClassName, "form-item__label")}>
+          {label}&nbsp;{required ? "*" : ""} {labelTootip ?? ""}
         </div>
       )}
-      {subLabel && <p className='text--red'>{subLabel}</p>}
-      {description && <div className={cx(labelClassName, 'form-item__description')}>{description}</div>}
-      <div className='field'>
+      {subLabel && <p className="text--red">{subLabel}</p>}
+      {description && <div className={cx(labelClassName, "form-item__description")}>{description}</div>}
+      <div className="field">
         <Field
           type={type}
           name={name}
@@ -752,7 +750,7 @@ const FormItem = ({
         />
         {appendInput}
 
-        <ErrorMessage name={errorField || name} component='div' className={cx('error-text', errorClassName)} />
+        <ErrorMessage name={errorField || name} component="div" className={cx("error-text", errorClassName)} />
       </div>
       {children}
     </div>
