@@ -56,6 +56,10 @@
       max-width: 100%;
       width: 100%;
 
+      .list-skill-container {
+        margin-top: 30px;
+      }
+
       .title {
         color: $color_white;
         user-select: none;
@@ -119,25 +123,10 @@
 
       .skills {
         text-transform: uppercase;
-        margin-top: 45px !important;
+        // margin-top: 45px !important;
       }
 
       .author-skills {
-        margin-top: 14px;
-
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px 20px;
-
-        font-family: $blinker;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        /* identical to box height */
-
-        color: $color_white;
-
         .skill {
           .ant-badge-status-text {
             font-family: $blinker;

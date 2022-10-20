@@ -5,18 +5,20 @@ import Linkedin from "public/svg/LinkedinNegative.svg";
 import Telegram from "public/svg/TelegramNegative.svg";
 
 import CSS from "public/svg/tech/css.svg";
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
-// import  from 'public/svg/tech/css.svg'
+import Java from "public/svg/tech/java.svg";
+import SASS from "public/svg/tech/sass.svg";
+import Redux from "public/svg/tech/redux.svg";
+import Figma from "public/svg/tech/figma.svg";
+import MySQL from "public/svg/tech/mysql.svg";
+import HTML5 from "public/svg/tech/html5.svg";
+import Gitlab from "public/svg/tech/gitlab.svg";
+import Javascript from "public/svg/tech/js.svg";
+import NextJS from "public/svg/tech/nextjs.svg";
+import NodeJS from "public/svg/tech/nodejs.svg";
+import Postman from "public/svg/tech/postman.svg";
+import ReactJS from "public/svg/tech/reactjs.svg";
+import Webpack from "public/svg/tech/webpack.svg";
+import Typescript from "public/svg/tech/typescript.svg";
 
 export const AUTHOR_SOCIAL_MEDIA = [
   {
@@ -46,13 +48,72 @@ export const AUTHOR_SOCIAL_MEDIA = [
   },
 ];
 
+// export const AUTHOR_SKILLS = [ReactJS, NextJS, Typescript, NodeJS, HTML5, CSS, Javascript];
+
 export const AUTHOR_SKILLS = [
-  "React JS",
-  "Next JS",
-  "Typescript",
-  "Node JS",
-  "HTML5 / CSS3 / Javascript",
-  "Library (redux, zustand...)",
+  {
+    icon: ReactJS,
+    name: "ReactJS",
+  },
+  {
+    icon: NextJS,
+    name: "NextJS",
+  },
+  {
+    icon: Typescript,
+    name: "Typescript",
+  },
+  {
+    icon: NodeJS,
+    name: "NodeJS",
+  },
+  {
+    icon: HTML5,
+    name: "HTML5",
+  },
+  {
+    icon: CSS,
+    name: "CSS3",
+  },
+  {
+    icon: Javascript,
+    name: "Javascript",
+  },
+  {
+    icon: Java,
+    name: "Java",
+  },
+  {
+    icon: MySQL,
+    name: "MySql",
+  },
+];
+
+export const AUTHOR_TECH = [
+  {
+    icon: Redux,
+    name: "Redux",
+  },
+  {
+    icon: Webpack,
+    name: "Webpack",
+  },
+  {
+    icon: SASS,
+    name: "SASS",
+  },
+  {
+    icon: Gitlab,
+    name: "Gitlab",
+  },
+  {
+    icon: Figma,
+    name: "Figma",
+  },
+  {
+    icon: Postman,
+    name: "Postman",
+  },
 ];
 
 export const USER_TABS = {
