@@ -5,14 +5,13 @@ import classNames from "classnames";
 
 import All from "./All";
 import Main from "./Main";
-import Others from "./Others";
 import Blockchain from "./Blockchain";
 import AppTab from "@components//AppTab";
 
 import { AUTHOR_HEADER_TITLE, USER_TABS } from "constants/author";
 
+const { ALL, BLOCKCHAIN, MAIN } = USER_TABS;
 const { CAREER, WORK } = AUTHOR_HEADER_TITLE;
-const { ALL, BLOCKCHAIN, MAIN, OTHERS } = USER_TABS;
 
 const WorkExp = () => {
   const router = useRouter();
@@ -58,11 +57,6 @@ const WorkExp = () => {
       key: MAIN,
       tab: <RenderTab key={MAIN} label="Main" display={true} />,
       content: <Main />,
-    },
-    {
-      key: OTHERS,
-      tab: <RenderTab key={OTHERS} label="Others" display={true} />,
-      content: <Others />,
     },
   ];
 

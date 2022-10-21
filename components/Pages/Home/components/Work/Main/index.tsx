@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/future/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Tooltip } from "antd";
 import { Grid, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import DefaultImage from "public/image/dark_image.jpg";
 
 import Modal from "@components//Modal";
 import ModalContentCustom from "@components//Modal/ModalContentCustom";
 
-import { MAX_SLIDE_ITEM } from "constants/common";
-import { AUTHOR_PROJECTS } from "constants/author_projects";
 import { PROJECT_PROPERTIES, USER_TABS } from "constants/author";
+import { AUTHOR_PROJECTS_MAIN } from "constants/author_projects";
 
 const { ALL } = USER_TABS;
 const { IMAGE, TYPE, TITLE, STATUS, POSITION, DATE, TECHNIQUE, CONTENT } = PROJECT_PROPERTIES;
@@ -38,14 +38,16 @@ const Main = () => {
         pagination={{ clickable: true }}
         className="mySwiper"
       >
-        {AUTHOR_PROJECTS.map((project, index: number) => (
+        {AUTHOR_PROJECTS_MAIN.map((project, index: number) => (
           <SwiperSlide className="project-container" key={index}>
-            <Image
-              alt={project?.[TITLE]}
-              src={project?.[IMAGE] ? project?.[IMAGE] : DefaultImage}
-              onClick={handleOpenProject(project)}
-              className="project-image"
-            />
+            <Tooltip placement="top" title={project.title} overlayClassName="tooltip-container">
+              <Image
+                alt={project?.[TITLE]}
+                src={project?.image ? project?.image : DefaultImage}
+                onClick={handleOpenProject(project)}
+                className="project-image"
+              />
+            </Tooltip>
           </SwiperSlide>
         ))}
       </Swiper>
