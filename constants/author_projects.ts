@@ -1,6 +1,6 @@
 import reactjs_icon from "public/svg/reactjs-icon.svg";
 
-import Example from "public/image/Project/Example.jpg";
+import NLC_Marketplace from "public/image/Project/NLC.png";
 import Dictionary from "public/image/Project/dictionary.png";
 import C2C_Whitelabel_Marketplace from "public/image/Project/C2C.png";
 
@@ -26,6 +26,19 @@ export const AUTHOR_PROJECTS = [
             exercitationem. Labore iure pariatur eligendi?`,
   },
   {
+    image: NLC_Marketplace,
+    type: BLOCKCHAIN,
+    title: "NLC Projects - Marketplace",
+    status: INPROGRESS,
+    position: FRONT_END,
+    date: "09/09/2022",
+    technique: "React JS, Next JS...",
+    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
+            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
+            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
+            exercitationem. Labore iure pariatur eligendi?`,
+  },
+  {
     image: Dictionary,
     type: MAIN,
     title: "Dictionary B",
@@ -35,19 +48,6 @@ export const AUTHOR_PROJECTS = [
     technique: "React JS",
     content: `Dictionary to search keyword, how to pronouce, this sites like another pages Dictionary else. But less features than
             Features: Search, Listen (Audio), Search by Language`,
-  },
-  {
-    image: "",
-    type: BLOCKCHAIN,
-    title: "C2C Whitelabel Marketplace 3",
-    status: INPROGRESS,
-    position: FRONT_END,
-    date: "23/05/2022",
-    technique: "React JS, Next JS...",
-    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
-            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
-            exercitationem. Labore iure pariatur eligendi?`,
   },
   {
     image: "",
