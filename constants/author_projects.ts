@@ -51,11 +51,87 @@ export const AUTHOR_PROJECTS = [
   },
   {
     image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+  {
+    image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+  {
+    image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+  {
+    image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+  {
+    image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+  {
+    image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+];
+
+export const AUTHOR_PROJECTS_BLOCKCHAIN = [
+  {
+    image: C2C_Whitelabel_Marketplace,
     type: BLOCKCHAIN,
-    title: "C2C Whitelabel Marketplace 4",
+    title: "C2C Whitelabel Marketplace",
     status: INPROGRESS,
     position: FRONT_END,
     date: "23/05/2022",
+    technique: "reactjs_icon",
+    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
+            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
+            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
+            exercitationem. Labore iure pariatur eligendi?`,
+  },
+  {
+    image: NLC_Marketplace,
+    type: BLOCKCHAIN,
+    title: "NLC Projects - Marketplace",
+    status: INPROGRESS,
+    position: FRONT_END,
+    date: "09/09/2022",
     technique: "React JS, Next JS...",
     content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
             error exercitationem dolore. Corrupti, id aliquam! Enim eaque
@@ -64,67 +140,86 @@ export const AUTHOR_PROJECTS = [
   },
   {
     image: "",
-    type: BLOCKCHAIN,
-    title: "C2C Whitelabel Marketplace 4",
+    type: "",
+    title: "Later",
     status: INPROGRESS,
-    position: FRONT_END,
-    date: "23/05/2022",
-    technique: "React JS, Next JS...",
-    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
-            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
-            exercitationem. Labore iure pariatur eligendi?`,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
   },
   {
     image: "",
-    type: BLOCKCHAIN,
-    title: "C2C Whitelabel Marketplace 4",
+    type: "",
+    title: "Later",
     status: INPROGRESS,
-    position: FRONT_END,
-    date: "23/05/2022",
-    technique: "React JS, Next JS...",
-    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
-            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
-            exercitationem. Labore iure pariatur eligendi?`,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
   },
   {
     image: "",
-    type: BLOCKCHAIN,
-    title: "C2C Whitelabel Marketplace 4",
+    type: "",
+    title: "Later",
     status: INPROGRESS,
-    position: FRONT_END,
-    date: "23/05/2022",
-    technique: "React JS, Next JS...",
-    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
-            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
-            exercitationem. Labore iure pariatur eligendi?`,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+];
+
+export const AUTHOR_PROJECTS_MAIN = [
+  {
+    image: Dictionary,
+    type: MAIN,
+    title: "Dictionary B",
+    status: DONE,
+    // position: FULLSTACK,
+    date: "11/02/2020",
+    technique: "React JS",
+    content: `Dictionary to search keyword, how to pronouce, this sites like another pages Dictionary else. But less features than
+            Features: Search, Listen (Audio), Search by Language`,
   },
   {
     image: "",
-    type: BLOCKCHAIN,
-    title: "C2C Whitelabel Marketplace 4",
+    type: "",
+    title: "Later",
     status: INPROGRESS,
-    position: FRONT_END,
-    date: "23/05/2022",
-    technique: "React JS, Next JS...",
-    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
-            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
-            exercitationem. Labore iure pariatur eligendi?`,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
   },
   {
     image: "",
-    type: BLOCKCHAIN,
-    title: "C2C Whitelabel Marketplace 4",
+    type: "",
+    title: "Later",
     status: INPROGRESS,
-    position: FRONT_END,
-    date: "23/05/2022",
-    technique: "React JS, Next JS...",
-    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-            error exercitationem dolore. Corrupti, id aliquam! Enim eaque
-            modi laboriosam ipsa doloremque, saepe tempore nulla cumque
-            exercitationem. Labore iure pariatur eligendi?`,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+  {
+    image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
+  },
+  {
+    image: "",
+    type: "",
+    title: "Later",
+    status: INPROGRESS,
+    position: "",
+    date: "",
+    technique: "",
+    content: ``,
   },
 ];

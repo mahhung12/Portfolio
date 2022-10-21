@@ -18,6 +18,7 @@ import NodeJS from "public/svg/tech/nodejs.svg";
 import Postman from "public/svg/tech/postman.svg";
 import ReactJS from "public/svg/tech/reactjs.svg";
 import Webpack from "public/svg/tech/webpack.svg";
+import Tailwind from "public/svg/tech/tailwind.svg";
 import Typescript from "public/svg/tech/typescript.svg";
 
 export const AUTHOR_SOCIAL_MEDIA = [
@@ -47,8 +48,6 @@ export const AUTHOR_SOCIAL_MEDIA = [
     url: "https://www.linkedin.com/in/hung-hung-887199212/",
   },
 ];
-
-// export const AUTHOR_SKILLS = [ReactJS, NextJS, Typescript, NodeJS, HTML5, CSS, Javascript];
 
 export const AUTHOR_SKILLS = [
   {
@@ -101,6 +100,10 @@ export const AUTHOR_TECH = [
   {
     icon: SASS,
     name: "SASS",
+  },
+  {
+    icon: Tailwind,
+    name: "Tailwind",
   },
   {
     icon: Gitlab,
