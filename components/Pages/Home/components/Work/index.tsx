@@ -11,7 +11,7 @@ import AppTab from "@components//AppTab";
 import { AUTHOR_HEADER_TITLE, USER_TABS } from "constants/author";
 
 const { ALL, BLOCKCHAIN, MAIN } = USER_TABS;
-const { CAREER, WORK } = AUTHOR_HEADER_TITLE;
+const { CAREER } = AUTHOR_HEADER_TITLE;
 
 const WorkExp = () => {
   const router = useRouter();
