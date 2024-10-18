@@ -1,9 +1,10 @@
 import { Container } from "@/components/Container";
 
-import SocialList from "./social-list";
-import Resume from "./resume";
 import Newsletter from "./news-letter";
+import Resume from "./resume";
 import SideProject from "./side-project";
+import Skills from "./skills";
+import SocialList from "./social-list";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
             <Resume />
           </div>
           <div className="h-fit space-y-10 lg:pl-16 xl:pl-24 justify-center sticky top-5">
+            <Skills />
             <SideProject />
             <Newsletter />
           </div>

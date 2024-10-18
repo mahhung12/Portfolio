@@ -2,79 +2,60 @@ import { Card } from "@/components/Card";
 
 const projects = [
   {
-    date: "April - July 2021",
-    name: "Mobile Developer - Intern",
+    date: "Mar 2024 - Present",
+    name: "BEX - Benly Marketplace - Fullstack Developer",
     description: [
-      "Designed the user interface for an e-commerce application using Flutter.",
-      "Implemented the Bloc pattern for effective state management, enhancing app performance.",
+      "Collaborated with team members to develop a new e‑commerce platform for a Japanese client using the Medusa framework",
+      "Contributed to the implementation of microservice architecture in the backend for scalability and maintainability e‑Commerce platform",
+      "Actively involved in the Medusa community, contributing code or documentation improvements",
     ],
-    skill:
-      "Flutter, Observer Design Pattern, Bloc Pattern, Performance Optimization",
+    skill: "Microservices, EC2, S3, Medusa, TypeScript, React, NextJS, TailwindCSS, Express, Docker, CI/CD, AWS",
   },
   {
-    date: "August 2021 - November 2021",
-    name: "Mobile Developer - Intern",
+    date: "Jul 2023 - Dec 2023",
+    name: "VNA Booking - Frontend Developer",
     description: [
-      "Developed the Feedback application using Android Native Java.",
-      "Participated in comprehensive product development planning.",
-      "Assumed multiple roles, including design, business analysis, and testing, to ensure project success.",
+      "Flight Booking and Ticket Management Channel - Vietnam Airline",
+      "Development of the system’s core feature, focusing on flight booking functionality",
+      "Create a system that can handle Multiple Transactions at the same time",
     ],
-    skill: "Android Native Java, Full Lifecycle Development, MVP pattern",
+    skill: "Java, NextJS, TailwindCSS, React-Query, React-Hook-Form, Docker, Jenkin",
   },
   {
-    date: "January 2022 - June 2022",
-    name: "NodeJs - Fresher",
+    date: "Dec 2022 - May 2023",
+    name: "FLPKX MP x Swap - Blockchain Platform - Frontend Developer",
     description: [
-      "Created a server using Node.js to automate Appium actions on mobile devices.",
-      "Developed a function for AI-based automated actions across multiple mobile devices.",
-      "Gained expertise in Kafka, microservices, AWS, and Jenkins.",
-      "Contributed to system stability by resolving persistent issues and implementing best practices.",
+      "A platform is being created on the Solana Network that includes an NFT marketplace, a system for swapping tokens, a peer‑to‑peer token marketplace, and a tool for token vesting",
+      "The platform will interact with the Solana network through the project‑serum/anchor framework",
     ],
-    skill: "Nodejs, Kafka, AWS, Jenkins, System Migration, Automated Testing.",
+    skill: "Solana, NextJS, TypeScript, TailwindCSS, Anchor, Serum, Solana Wallet, Phantom Wallet, Solana Explorer",
   },
   {
-    date: "June 2022 - September 2022",
-    name: "Flutter - Junior",
+    date: "Aug 2022 - Nov 2022",
+    name: "NLC/NFT Marketplace - Blockchain Platform - Frontend Developer",
     description: [
-      "Utilized Flutter for front-end development and SocketIO for server communication with Node.js.",
-      "Developed an application to streamline team planning, retrospectives, and sprint reviews.",
-      "The application I worked on was enthusiastically adopted as a key tool for task organization and strategic planning.",
+      "Develop NFT Marketplace, staking services, and sell NFT.",
+      "Additionally, an Administrator System will be developed to manage NFTs and revenue",
+      "Technologies using for client and server side is React/NestJs",
     ],
-    skill: "Flutter, SocketIO, Node.js, Bloc Patern",
+    skill: "React, NextJS, TypeScript, TailwindCSS, NestJS, TypeORM, PostgreSQL, Docker, CI/CD, AWS",
   },
   {
-    date: "September 2022 - December 2023",
-    name: "React Native - Junior",
+    date: "Feb 2022 - Sep 2022",
+    name: "C2C Marketplace - Frontend Developer",
     description: [
-      "Designed the user interface for a garage store app using React Native.",
-      "Implemented mobile authentication with Azure B2C and Auth0.",
-      "Leveraged Expo for app development and production deployment.",
-      "Contributed to backend development by creating DotNet APIs for the Garage application using the DDD pattern.",
-      "Bridged the gap between front-end and back-end development, enhancing the team's full-stack capabilities and reducing reliance on the backend team.",
+      "Develop C2C Marketplace to create, group NFT by collections, stores of their own and start selling, make offers independently.",
     ],
-    skill:
-      "React Native, Expo, SignalR, B2C Azure, Auth0, DotNet (Back-End), Azure DevOps (Back-End)",
+    skill: "React, NextJS, TypeScript, TailwindCSS.",
   },
   {
-    date: "January 2024 - June 2024",
-    name: "Flutter - Junior",
+    date: "Aug 2023 - Present",
+    name: "Age of 23 - Side portfolio project",
     description: [
-      "Developed the user interface for a garage application using Flutter.",
-      "Integrated SignalR for efficient event handling from the back-end.",
-      "Customized libraries and created specialized ones to enhance the app's functionality.",
+      "Creating a captivating website that serves as a concise summary, encompassing my work, education, personal journey.",
+      "Use notion api to manage blog features, deploying to Vercel.",
     ],
-    skill: "Flutter, SignalR, Bloc Patern, Build Runner library",
-  },
-  {
-    date: "September 2023 - March 2024",
-    name: "NextJs - OpenAI intergrate App - Fullstack Developer",
-    description: [
-      "Developed to assist researchers, master’s, and doctoral students in finding research questions for their studies or publications.",
-      "The app helps users quickly discover compelling research topics and determine if they have been addressed in existing studies or publications.",
-      "Built the first version of the product from scratch which made $20K in the first 2 months",
-    ],
-    skill:
-      "NextJs, Tailwinds, Vercel KV, Vercel Devops, Lemon Squeezy Payment, OpenAI API, Clerk Authenticate",
+    skill: "React, NextJS, TypeScript, TailwindCSS, Notion API, Vercel",
   },
 ];
 

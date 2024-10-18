@@ -4,7 +4,7 @@ import { PiEnvelopeBold } from "react-icons/pi";
 
 export default function Newsletter() {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <PiEnvelopeBold className="h-6 w-6 flex-none" />
         <span className="ml-3">Stay up to date</span>
