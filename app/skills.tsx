@@ -32,6 +32,7 @@ import {
   SiSqlite,
   SiTailwindcss,
   SiTrello,
+  SiTypeorm,
   SiTypescript,
   SiVercel,
   SiVitest,
@@ -63,6 +64,8 @@ const skills = {
     { name: "Node.js", icon: <FaNodeJs /> },
     { name: "Express.js", icon: <SiExpress /> },
     { name: "NestJS", icon: <SiNestjs /> },
+    { name: "TypeORM", icon: <SiTypeorm /> },
+    { name: "NextJs", icon: <SiNextdotjs /> },
 
     // { name: "Django", icon: <SiDjango /> },
     // { name: "Flask", icon: <SiFlask /> },
@@ -116,7 +119,7 @@ export default function Skills() {
         <span className="ml-3">Technologies</span>
       </h2>
 
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+      <div className="mt-4 md:grid grid-cols-1 md:grid-cols-2 gap-3">
         {/* {Object.entries(skills).map(([category, skillsList]) => ( */}
         {Object.entries(skills).map(([category, skillsList], index, array) => (
           <div
@@ -126,7 +129,9 @@ export default function Skills() {
               index === array.length - 1 ? "col-span-2" : ""
             }`}
           >
-            <span className="md:text-lg text-xl text-gray-500 dark:text-gray-400 font-bold">{category}</span>
+            <div className="md:text-lg text-xl text-gray-500 dark:text-gray-400 font-bold text-center md:text-left">
+              {category}
+            </div>
             <div
               className={`grid grid-cols-2 gap-2 mt-2 ${
                 index === array.length - 1 ? "sm:grid-cols-5" : "sm:grid-cols-3"
@@ -139,7 +144,7 @@ export default function Skills() {
                 >
                   <span className="md:text-lg text-2xl">{skill.icon}</span>
                   {/* <span className="mt-1 text-sm text-gray-700 dark:text-gray-300">{skill.name}</span> */}
-                  <span className="z-10 p-1 absolute w-full left-0 top-full mt-1 w-auto text-xs text-nowrap text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="z-10 p-1 mx-auto absolute w-fit left-0 right-0 top-full mt-1 text-xs text-nowrap text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity">
                     {skill.name}
                   </span>
                 </div>

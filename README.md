@@ -65,6 +65,6 @@ Contributions are always welcome! Please read the contributing guidelines first 
 
 ## Contact
 
-If you have any questions, feel free to reach out to me at khanhduyvt0101@gmail.com.
+If you have any questions, feel free to reach out to me at mhung.forwork@gmail.com.
 
 Thank you for visiting my portfolio's source code repository!
