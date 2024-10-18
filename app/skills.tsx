@@ -64,7 +64,7 @@ const skills = {
     { name: "Node.js", icon: <FaNodeJs /> },
     { name: "Express.js", icon: <SiExpress /> },
     { name: "NestJS", icon: <SiNestjs /> },
-    { name: "TypeORM", icon: <SiTypeorm /> },
+    // { name: "TypeORM", icon: <SiTypeorm /> },
     { name: "NextJs", icon: <SiNextdotjs /> },
 
     // { name: "Django", icon: <SiDjango /> },
