@@ -68,4 +68,4 @@ Contributions are always welcome! Please read the contributing guidelines first 
 
 If you have any questions, feel free to reach out to me at mhung.forwork@gmail.com.
 
-Thank you for visiting my portfolio's source code repository!
+Thank you for visiting my portfolio's source code repository !
