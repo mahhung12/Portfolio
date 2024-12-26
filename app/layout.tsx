@@ -6,11 +6,9 @@ import "./globals.css";
 import { Providers } from "@/lib/providers";
 
 export const metadata: Metadata = {
-  title: "Harry D - Software Engineer",
-  description: "Portfolio of Harry D",
-  icons: {
-    icon: "/favicon.jpg",
-  },
+  title: "Harry - Software Engineer",
+  description: "Portfolio of Harry",
+  icons: {    icon: "/favicon.jpg"  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

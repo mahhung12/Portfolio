@@ -6,11 +6,6 @@ import { Container } from "@/components/Container";
 import avatarImage from "@/images/small-avatar.jpg";
 import SocialList from "../social-list";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "I’m Harry D. living in Hanoi - Vietnam, enjoy building software and learning new technologies.",
-};
-
 export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">

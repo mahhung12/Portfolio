@@ -1,4 +1,4 @@
-# Harry D Portfolio Website
+# Harry Portfolio Website
 
 This repository contains the source code for my personal portfolio website built with Next.js and styled using TailwindCSS. The website showcases my projects, skills, and experiences, offering a comprehensive look at my professional capabilities.
 
@@ -11,6 +11,7 @@ This repository contains the source code for my personal portfolio website built
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - Node.js (12.x or later)
 - npm (6.x or later) or yarn (1.22.x or later)
 

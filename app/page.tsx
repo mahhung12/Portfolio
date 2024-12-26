@@ -15,7 +15,7 @@ export default function Home() {
             Software Engineer
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hey there 👋👋, I&apos;m <b>Harry D</b>. <br />
+            Hey there 👋👋, I&apos;m <b>Harry</b>. <br />
             For the past 4 years, I&apos;ve been crafting seamless digital experiences as a Fullstack developer. Explore
             my portfolio to see how I can bring your ideas to life with precision and creativity.
             <br />
