@@ -11,6 +11,7 @@ This repository contains the source code for my personal portfolio website built
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - Node.js (12.x or later)
 - npm (6.x or later) or yarn (1.22.x or later)
 
@@ -67,4 +68,4 @@ Contributions are always welcome! Please read the contributing guidelines first 
 
 If you have any questions, feel free to reach out to me at mhung.forwork@gmail.com.
 
-Thank you for visiting my portfolio's source code repository!
+Thank you for visiting my portfolio's source code repository !
