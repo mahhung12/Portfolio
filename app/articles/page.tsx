@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import SpotlightCard from "@/components/Spotlight/SpotlightCard";
 import Image from "next/image";
 
 const posts = [
@@ -40,12 +41,19 @@ const posts = [
     title: "Boosting React App Performance with useMemo and useCallback",
     href: "https://medium.com/@khanhduyvt/boosting-react-app-performance-with-usememo-and-usecallback-b698a3e1a076",
     description:
-      "In this blog post, we will dive into how you can leverage these hooks to enhance the rendering performance of your React app.",
+      "In this blog post, we will dive into how you can leverage these hooks to enhance the rendering performance of your React app.asdasdasdasdasdasdu can leverage these hooks to enhance the rendering performance of your React app.asdasdasdasdasdasdu can leverage these hooks to enhance the rendering performance of your React app.asdasdasdasdasdasd",
     imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WHxA66_jGo8Xs3n5b5silg.png",
     date: "Nov 27, 2023",
     datetime: "2020-11-27",
     category: { title: "Developer", href: "#" },
   },
+];
+
+const demoItems = [
+  { link: "#", text: "Mojave", image: "https://picsum.photos/600/400?random=1" },
+  { link: "#", text: "Sonoma", image: "https://picsum.photos/600/400?random=2" },
+  { link: "#", text: "Monterey", image: "https://picsum.photos/600/400?random=3" },
+  { link: "#", text: "Sequoia", image: "https://picsum.photos/600/400?random=4" },
 ];
 
 export default function Articles() {
@@ -59,42 +67,45 @@ export default function Articles() {
               Writing is a way to share knowledge and insights with the world.
             </p>
           </div>
-          {posts.length < 0 ? (
+
+          {posts.length > 0 ? (
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {posts.map((post) => (
-                <article key={post.id} className="flex flex-col items-start justify-between">
-                  <div className="relative w-full">
-                    <Image
-                      height={360}
-                      width={540}
-                      src={post.imageUrl}
-                      alt=""
-                      className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                    />
-                    <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-                  </div>
-                  <div className="max-w-xl">
-                    <div className="mt-8 flex items-center gap-x-4 text-xs">
-                      <time dateTime={post.datetime} className="text-zinc-800 dark:text-zinc-300">
-                        {post.date}
-                      </time>
-                      <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-zinc-800">
-                        {post.category.title}
-                      </span>
+                <SpotlightCard key={post.id} className="p-4">
+                  <article className="flex flex-col items-start justify-between">
+                    <div className="relative w-full">
+                      <Image
+                        height={360}
+                        width={540}
+                        src={post.imageUrl}
+                        alt=""
+                        className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                      />
+                      <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
-                    <div className="group relative">
-                      <h3 className="mt-3 text-lg font-semibold leading-6 text-zinc-800 dark:text-zinc-300 group-hover:text-teal-500 dark:group-hover:text-teal-50">
-                        <a href={post.href}>
-                          <span className="absolute inset-0" />
-                          {post.title}
-                        </a>
-                      </h3>
-                      <p className="mt-5 line-clamp-3 text-sm leading-6 text-zinc-800 dark:text-zinc-300 group-hover:text-teal-500 dark:group-hover:text-teal-50">
-                        {post.description}
-                      </p>
+                    <div className="max-w-xl">
+                      <div className="mt-8 flex items-center gap-x-4 text-xs">
+                        <time dateTime={post.datetime} className="text-zinc-800 dark:text-zinc-300">
+                          {post.date}
+                        </time>
+                        <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-zinc-800">
+                          {post.category.title}
+                        </span>
+                      </div>
+                      <div className="group relative">
+                        <h3 className="mt-3 text-lg font-semibold leading-6 text-zinc-800 dark:text-zinc-300 group-hover:text-teal-500 dark:group-hover:text-teal-50">
+                          <a href={post.href}>
+                            <span className="absolute inset-0" />
+                            {post.title}
+                          </a>
+                        </h3>
+                        <p className="mt-5 line-clamp-3 text-sm leading-6 text-zinc-800 dark:text-zinc-300 group-hover:text-teal-500 dark:group-hover:text-teal-50">
+                          {post.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </SpotlightCard>
               ))}
             </div>
           ) : (

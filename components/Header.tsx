@@ -1,70 +1,27 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import {
+  Popover,
+  PopoverBackdrop,
+  PopoverButton,
+  PopoverOverlay,
+  PopoverPanel,
+  Transition,
+  TransitionChild,
+} from "@headlessui/react";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
-import { Popover, PopoverButton, PopoverOverlay, PopoverPanel, Transition, TransitionChild } from "@headlessui/react";
-import clsx from "clsx";
+import { useEffect, useRef, useState } from "react";
 
+import { ChevronDownIcon } from "@/assets/icons/ChevronDownIcon";
+import { CloseIcon } from "@/assets/icons/CloseIcon";
+import { MoonIcon } from "@/assets/icons/MoonIcon";
+import { SunIcon } from "@/assets/icons/SunIcon";
 import { Container } from "@/components/Container";
 import avatarImage from "@/images/small-avatar.jpg";
-
-function CloseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ChevronDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return (
-    <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
-      <path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function SunIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z" />
-      <path
-        d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
-        fill="none"
-      />
-    </svg>
-  );
-}
-
-function MoonIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 function MobileNavItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -92,7 +49,7 @@ function MobileNavigation(props: React.ComponentPropsWithoutRef<typeof Popover>)
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <PopoverOverlay className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80" />
+          <PopoverBackdrop className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80" />
         </TransitionChild>
         <TransitionChild
           enter="duration-150 ease-out"
@@ -117,6 +74,7 @@ function MobileNavigation(props: React.ComponentPropsWithoutRef<typeof Popover>)
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
+                <MobileNavItem href="/showcase">Showcase</MobileNavItem>
               </ul>
             </nav>
           </PopoverPanel>
@@ -153,6 +111,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
+        <NavItem href="/showcase">Showcase</NavItem>
         {/* <NavItem href="https://khanhduy.com/">Blog</NavItem> */}
       </ul>
     </nav>
@@ -161,6 +120,16 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
 
 function ThemeToggle() {
   let { resolvedTheme, setTheme } = useTheme();
+  let [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   let otherTheme = resolvedTheme === "dark" ? "light" : "dark";
 
   return (
@@ -272,6 +241,7 @@ export function Header() {
         setProperty("--avatar-top", "0px");
       }
     }
+
     function updateAvatarStyles() {
       if (!isHomePage) {
         return;

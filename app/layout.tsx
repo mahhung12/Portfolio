@@ -8,7 +8,7 @@ import { Providers } from "@/lib/providers";
 export const metadata: Metadata = {
   title: "Harry - Software Engineer",
   description: "Portfolio of Harry",
-  icons: {    icon: "/favicon.jpg"  },
+  icons: { icon: "/favicon.jpg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

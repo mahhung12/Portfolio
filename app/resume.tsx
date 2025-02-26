@@ -1,8 +1,18 @@
 import { Card } from "@/components/Card";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const projects = [
   {
-    date: "Mar 2024 - Present",
+    date: "Aug 2024 - Present",
+    name: "Oyika ‑ Battery Swapping Services (Battery‑as‑a‑Service (BaaS)",
+    description: [
+      "Developing Backend using main technologies is NodeJS and Golang to support a seamless Battery as a Service platform for IoT devices and electric motorbike",
+      "Implementing efficient APIs and Microservices to enhance user interaction with the project app and manage service requests.",
+    ],
+    skill: "Typescript, NextJS, NodeJS, Golang, Docker, CI/CD, AWS",
+  },
+  {
+    date: "Mar 2024 - Dec 2024",
     name: "BEX - Benly Marketplace - Fullstack Developer",
     description: [
       "Collaborated with team members to develop a new e‑commerce platform for a Japanese client using the Medusa framework",
@@ -86,11 +96,11 @@ function ResumeItem({ title, description, date, skill }: ResumeItemProps) {
 export default function Resume() {
   return projects.map((project, index) => (
     <ResumeItem
-      key={index}
       title={project.name}
       description={project.description}
       date={project.date}
       skill={project.skill}
+      key={index}
     />
   ));
 }
