@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { ChevronDownIcon } from "@/assets/icons/ChevronDownIcon";
 import { CloseIcon } from "@/assets/icons/CloseIcon";
