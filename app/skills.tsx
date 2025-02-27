@@ -18,7 +18,7 @@ import {
   SiMysql,
   SiNestjs,
   SiNextdotjs,
-  SiPlaywright,
+  // SiPlaywright,
   SiPostgresql,
   SiPrettier,
   //   SiReactnative,
@@ -86,7 +86,7 @@ const skills = {
   Testing: [
     { name: "Jest", icon: <SiJest /> },
     { name: "Vitest", icon: <SiVitest /> },
-    { name: "Playwright", icon: <SiPlaywright /> },
+    // { name: "Playwright", icon: <SiPlaywright /> },
     // { name: "Mocha", icon: <SiMocha /> },
     // { name: "Chai", icon: <SiChai /> },
     // { name: "Cypress", icon: <SiCypress /> },
