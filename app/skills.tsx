@@ -20,6 +20,7 @@ import {
   SiMysql,
   SiNestjs,
   SiNextdotjs,
+  // SiPlaywright,
   SiPostgresql,
   SiPrettier,
   //   SiReactnative,
