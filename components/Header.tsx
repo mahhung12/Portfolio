@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Popover,
-  PopoverBackdrop,
-  PopoverButton,
-  PopoverPanel,
-  Transition,
-  TransitionChild
-} from "@headlessui/react";
+import { Popover, PopoverBackdrop, PopoverButton, PopoverPanel, Transition, TransitionChild } from "@headlessui/react";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import Image from "next/image";
