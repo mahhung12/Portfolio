@@ -4,10 +4,9 @@ import {
   Popover,
   PopoverBackdrop,
   PopoverButton,
-  PopoverOverlay,
   PopoverPanel,
   Transition,
-  TransitionChild,
+  TransitionChild
 } from "@headlessui/react";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
