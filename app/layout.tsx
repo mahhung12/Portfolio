@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Harry - Software Engineer",
     description: "Portfolio of Harry",
     url: "https://mhung.blog",
-    siteName: "Your Site Name",
+    siteName: "Harry",
     images: [
       {
         url: "https://mhung.blog/og-image.jpg",
