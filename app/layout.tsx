@@ -29,6 +29,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <script
+          defer
+          data-website-id="68011ecbe7e79372c6356f8e"
+          data-domain="mhung.blog"
+          src="https://datafa.st/js/script.js"
+        ></script>
+      </head>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
         <Providers>
           <div className="w-full">
